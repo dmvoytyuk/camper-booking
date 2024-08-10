@@ -1,0 +1,33 @@
+.homePageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 888px;
+  margin: 0 auto;
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.homePageTitle {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #101828;
+  margin-bottom: 20px;
+}
+
+.homePageDescription {
+  margin-bottom: 32px;
+}
+
+.homePageLink {
+  width: max-content;
+  margin: 0 auto;
+  border: 1px solid rgba(71, 84, 103, 0.2);
+  border-radius: 200px;
+  padding: 16px 32px;
+  font-weight: 500;
+  color: #101828;
+}
