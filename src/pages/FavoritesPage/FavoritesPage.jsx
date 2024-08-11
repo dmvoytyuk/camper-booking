@@ -16,9 +16,7 @@ const FavoritesPage = () => {
   }, []);
 
   useEffect(() => {
-    console.log("rerender");
     if (campers && campers.length > 0) {
-      console.log("there are campers");
       const newFavoriteCampers = campers.filter(
         (camper, i) => camper._id === favorites[i],
       );
