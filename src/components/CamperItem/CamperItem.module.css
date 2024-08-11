@@ -108,3 +108,9 @@
   line-height: 1.5;
   letter-spacing: -0.01em;
 }
+
+.camperItemFavButton {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}

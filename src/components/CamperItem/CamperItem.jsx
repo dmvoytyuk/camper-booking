@@ -1,20 +1,19 @@
-import { useState } from "react";
-import Modal from "react-modal";
+import { useEffect, useState } from "react";
 import CamperDetails from "../CamperDetails/CamperDetails.jsx";
 import ModalWindow from "../ModalWindow/ModalWindow.jsx";
 import styles from "./CamperItem.module.css";
 import svg from "../../assets/icons.svg";
 
-const CamperItem = ({ camper }) => {
+const CamperItem = ({ camper, toggleFavorite, favorite }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const openModal = () => {
     setModalIsOpen(true);
   };
-
   const closeModal = () => {
     setModalIsOpen(false);
   };
+
   return (
     <li className={styles.camperItem}>
       <img
@@ -28,9 +27,21 @@ const CamperItem = ({ camper }) => {
           <span className={styles.camperItemTitlePrice}>
             €{camper.price}
             {".00"}
-            <svg className={styles.camperItemTitleIcon}>
-              <use xlinkHref={svg + "#icon-heart"} />
-            </svg>
+            <button
+              onClick={() => toggleFavorite(camper._id)}
+              className={styles.camperItemFavButton}
+            >
+              {favorite && (
+                <svg className={styles.camperItemTitleIcon}>
+                  <use xlinkHref={svg + "#icon-heart-full"} />
+                </svg>
+              )}
+              {!favorite && (
+                <svg className={styles.camperItemTitleIcon}>
+                  <use xlinkHref={svg + "#icon-heart"} />
+                </svg>
+              )}
+            </button>
           </span>
         </h2>
         <div className={styles.camperItemInfo}>
