@@ -1,0 +1,119 @@
+.searchSectionForm {
+  width: 360px;
+}
+
+.searchSectionFormCaption {
+  font-weight: 500;
+  line-height: 1.5;
+  color: #475467;
+  margin-bottom: 8px;
+}
+
+.searchSectionFormLocation {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+
+.searchSectionFormInput {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 18px 18px 18px 44px;
+  background-color: #f7f7f7;
+  line-height: 1.25;
+  color: #101828;
+  font-size: 16px;
+}
+
+.searchSectionFormInputIcon {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 20px;
+  fill: none;
+  stroke: #101828;
+}
+
+.searchSectionFormInput::placeholder {
+  color: rgba(16, 24, 40, 0.6);
+}
+
+.searchSectionFormFiltersContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.searchSectionFormFiltersContainer:last-child {
+  margin-bottom: 64px;
+}
+
+.searchSectionFormFiltersTitle {
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #101828;
+}
+
+.searchSectionFormFiltersHr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid rgba(16, 24, 40, 0.1);
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.searchSectionFormFiltersItem {
+}
+
+.searchSectionFormFiltersItemLabel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  border-radius: 10px;
+  width: 113px;
+  height: 95px;
+  text-align: center;
+  font-weight: 500;
+  color: #101828;
+  cursor: pointer;
+}
+
+.searchSectionFormCheckbox {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.searchSectionFormFiltersItemLabel:has(+ .searchSectionFormCheckbox:checked) {
+  border: 1px solid #e44848;
+}
+
+.searchSectionFormIcon {
+  fill: #101828;
+  height: 32px;
+  width: 32px;
+}
+
+.searchSectionFormButton {
+  border: none;
+  outline: none;
+  border-radius: 200px;
+  padding: 16px 60px;
+  background-color: #e44848;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: #fff;
+}

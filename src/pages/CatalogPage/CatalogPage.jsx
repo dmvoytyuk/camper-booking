@@ -1,8 +1,10 @@
+import SearchSection from "../../components/SearchSection/SearchSection.jsx";
+
 const CatalogPage = () => {
   return (
-    <div>
-      <h1>Catalog</h1>
-    </div>
+    <>
+      <SearchSection />
+    </>
   );
 };
 
