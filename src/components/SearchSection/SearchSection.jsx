@@ -44,9 +44,9 @@ const SearchSection = () => {
               htmlFor="ac"
             >
               <svg className={styles.searchSectionFormIcon}>
-                <use xlinkHref={svg + "#icon-ac"} />
+                <use xlinkHref={svg + "#icon-airConditioner"} />
               </svg>
-              AC
+              Air Conditioner
             </label>
             <input
               {...register("ac")}

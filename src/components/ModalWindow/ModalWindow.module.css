@@ -1,0 +1,50 @@
+.modalCloseButton {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  padding: 0;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.modalCloseButtonIcon {
+  height: 32px;
+  width: 32px;
+}
+
+.modalTop {
+  padding-left: 40px;
+  padding-right: 40px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.modalBottom {
+  height: 80%;
+  padding-left: 40px;
+  padding-right: 17px;
+  margin-right: 17px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.modalGallery {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.modalGalleryItem {
+  border-radius: 10px;
+  overflow: hidden;
+  height: 310px;
+  width: 290px;
+  flex-shrink: 0;
+}
+
+.modalGalleryImg {
+  width: 290px;
+  height: 310px;
+  object-fit: cover;
+}

@@ -21,6 +21,10 @@
   color: #101828;
 }
 
+.navBarListItemLink:hover {
+  border-color: #e44848;
+}
+
 .navBarListItemLinkActive {
   border-color: #e44848;
 }
