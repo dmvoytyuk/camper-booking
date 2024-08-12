@@ -1,31 +1,16 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import CamperItem from "../CamperItem/CamperItem.jsx";
 import styles from "./CamperList.module.css";
+import { selectFavorites } from "../../redux/favorites/selectors.js";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleFavorites } from "../../redux/favorites/slice.js";
 
 const CamperList = ({ campers }) => {
-  const [favorites, setFavorites] = useState([]);
+  const favorites = useSelector(selectFavorites);
+  const dispatch = useDispatch();
 
-  useEffect(() => {
-    const localStorageFavorites = JSON.parse(localStorage.getItem("favorites"));
-    if (localStorageFavorites) {
-      if (localStorageFavorites.length > 0) {
-        setFavorites(localStorageFavorites);
-      }
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("favorites", JSON.stringify(favorites));
-  }, [favorites]);
-
-  const toggleFavorite = (favoriteId) => {
-    if (favorites.includes(favoriteId)) {
-      const newFavorites = favorites.filter((id) => id !== favoriteId);
-      setFavorites(newFavorites);
-    } else {
-      const newFavorites = [...favorites, favoriteId];
-      setFavorites(newFavorites);
-    }
+  const toggleFavorite = (id) => {
+    dispatch(toggleFavorites({ id }));
   };
 
   return (
