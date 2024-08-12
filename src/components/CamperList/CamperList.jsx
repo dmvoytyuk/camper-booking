@@ -7,8 +7,10 @@ const CamperList = ({ campers }) => {
 
   useEffect(() => {
     const localStorageFavorites = JSON.parse(localStorage.getItem("favorites"));
-    if (localStorageFavorites.length > 0) {
-      setFavorites(localStorageFavorites);
+    if (localStorageFavorites) {
+      if (localStorageFavorites.length > 0) {
+        setFavorites(localStorageFavorites);
+      }
     }
   }, []);
 
